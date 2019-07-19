@@ -6,6 +6,11 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     // map over your movieData array and return the correct 
+    return movieData.map(
+      function(hash, idx ) {
+        return <MovieCard key={idx} {...hash} />
+      }
+    )
   }
 
   render() {
